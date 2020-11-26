@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { TicketsService } from './tickets.service';
+import { CardsService } from './cards.service';
 
 @Component({
-  selector: 'app-tickets',
-  templateUrl: './tickets.component.html',
-  styleUrls: ['./tickets.component.scss']
+  selector: 'app-cards',
+  templateUrl: './cards.component.html',
+  styleUrls: ['./cards.component.scss']
 })
-export class TicketsComponent implements OnInit {
+export class CardsComponent implements OnInit {
 
-  constructor(private change_value_form: FormBuilder, private cardService: TicketsService) { }
+  constructor(private change_value_form: FormBuilder, private cardService: CardsService) { }
 
   cardValue: FormGroup;
   cardTitle: string;

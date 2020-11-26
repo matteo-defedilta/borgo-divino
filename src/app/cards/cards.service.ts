@@ -5,7 +5,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'
 })
-export class TicketsService {
+export class CardsService {
 
   constructor(private firestore: AngularFirestore) { }
 
@@ -24,3 +24,4 @@ export class TicketsService {
     });
   }
 }
+ 

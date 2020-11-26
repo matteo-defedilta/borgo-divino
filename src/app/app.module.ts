@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { HeroComponent } from './hero/hero.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TicketsComponent } from './tickets/tickets.component';
+import { CardsComponent } from './cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { TicketsComponent } from './tickets/tickets.component';
     HeroComponent,
     ProgressBarComponent,
     NavbarComponent,
-    TicketsComponent
+    CardsComponent
   ],
   imports: [
     BrowserModule,
