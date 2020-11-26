@@ -1,3 +1,36 @@
-// .c-hero {
-//     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/src/static/img/heroPBDV.jpg');
-// }
+@import "../../styles.scss";
+.c-hero {
+
+    &__container{
+        background-image: url(/assets/img/wine.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        margin: 0;
+    }
+    &__main{
+        margin: 20px;
+        height: 300px;
+        @include mq($from: desktop) {
+            margin: 50px 20px;
+            height: 350px;
+        }
+
+        &-title{
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 1.0;
+            color: #fff;
+            @include mq($from: desktop) {
+                font-size: 3.5rem;
+                line-height: 1.2;
+            }
+        }
+        &-lead{
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+    }
+}
+

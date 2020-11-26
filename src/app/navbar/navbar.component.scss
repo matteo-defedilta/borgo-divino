@@ -1,0 +1,20 @@
+@import "../../styles.scss";
+
+.c-navbar{
+    padding: 0;
+    &__logo{
+        width: 40px;
+        height: 40px;
+    }
+    &__title{
+        font-family: Alex Brush;
+        font-size: 25px;
+        @include mq($from: desktop) {
+            font-size: 30px;
+        }
+    }
+    &__hamburger{
+        padding: 0;
+        margin-right: 10px;
+    }
+}

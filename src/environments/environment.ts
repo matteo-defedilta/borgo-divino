@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig : {
+    apiKey: "AIzaSyAOaKYgzHGeKza49NkO0h7hh17q-FrYb9w",
+    authDomain: "perano-borgo-di-vino.firebaseapp.com",
+    databaseURL: "https://perano-borgo-di-vino.firebaseio.com",
+    projectId: "perano-borgo-di-vino",
+    storageBucket: "perano-borgo-di-vino.appspot.com",
+    messagingSenderId: "415513065271",
+    appId: "1:415513065271:web:2ec766a4279e65d4a80cb2"
+  }
 };
 
 /*
