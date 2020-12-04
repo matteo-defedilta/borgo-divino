@@ -14,6 +14,10 @@ import { HeroComponent } from './hero/hero.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CardsComponent } from './cards/cards.component';
+import { CardLayoutComponent } from './card-layout/card-layout.component';
+import { CardPageComponent } from './card-page/card-page.component';
+
+import { UselessPipe } from './pipe/custom-string.pipe'
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { CardsComponent } from './cards/cards.component';
     HeroComponent,
     ProgressBarComponent,
     NavbarComponent,
-    CardsComponent
+    CardsComponent,
+    CardLayoutComponent,
+    CardPageComponent,
+    UselessPipe
   ],
   imports: [
     BrowserModule,

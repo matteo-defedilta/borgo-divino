@@ -1,0 +1,57 @@
+@import "../../styles.scss";
+
+.c-card {
+  &__container {
+    margin: 0;
+  }
+  &__item {
+    background: #8b0000;
+    padding-top: 15px;
+
+    @include mq($until: tablet) {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 5px;
+      margin: 5px 0;
+    }
+
+    .card-img-top{     
+      padding: 0;
+    }
+
+    .card-body {
+      background: #f5deb3;
+      margin: -25px 5px 0 5px;
+      border: 3px solid;
+      border-color: #8b0000;
+      padding: 10px;
+      width: auto;
+      height: 120px;
+      overflow: scroll;
+
+      &::-webkit-scrollbar{
+       display: none;
+      }
+
+      @include mq($until: tablet) {
+        margin: 0;
+        height: 100%;
+        border: none;
+      }
+    }
+
+    .card-title {
+      text-transform: capitalize;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .card-text{
+      @include mq($until: tablet) {
+        position: absolute;
+      }
+    }
+  }
+}

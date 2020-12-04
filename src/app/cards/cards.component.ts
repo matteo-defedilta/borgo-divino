@@ -12,6 +12,8 @@ export class CardsComponent implements OnInit {
 
   constructor(private change_value_form: FormBuilder, private cardService: CardsService) { }
 
+  cSelector = "createCard";
+
   cardValue: FormGroup;
   cardTitle: string;
   cardDesc: string;
@@ -22,17 +24,9 @@ export class CardsComponent implements OnInit {
       cardTitle: ["", Validators.required],
       cardDesc: ["", Validators.required]
     })
-    this.cardService.readCards()
-
   }
 
   newCard() {
     this.cardService.addNewCard(this.cardValue.value)
   }
-
-
-  cardList() {
-    console.log(this.cardService.readCards());
-  }
-
 }

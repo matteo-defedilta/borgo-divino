@@ -1,5 +1,5 @@
-<div class="container-fluid">
-  <div class="col-4">
+<div class="row m-2">
+  <div class="col col-lg-4">
     <form [formGroup]="cardValue" class="search_obj">
       <label>Inserire Titolo Della Card</label>
       <input class="form-control" type="text" [value]="cardTitle" formControlName="cardTitle" />
@@ -10,5 +10,8 @@
       <button class="waves-effect waves-light btn col s12" (click)="newCard()" >Crea Card</button>
     </form>
   </div>
-  
+  <div class="col-md-auto col-md-8">
+    <app-card-layout [cardSelector]="cSelector" ></app-card-layout>
+  </div>
+
 </div>
