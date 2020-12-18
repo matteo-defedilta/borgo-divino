@@ -1,0 +1,32 @@
+@import "../../styles.scss";
+
+.c-card-page{
+    background: #8b0000;
+    padding: 20px;
+    position: relative;
+    &__home{
+        position: absolute;
+        right: 20px;
+        top: 5px;
+        color: #fff;
+        cursor: pointer;
+    }
+    &__title{
+        text-transform: capitalize;
+        color: #fff;
+        @include mq($until: tablet) {
+            font-size: 34px;
+        }
+    }
+    &__img{
+        width: 100%;
+        @include mq($until: tablet) {
+            margin-top: 15px;
+        }
+    }
+    &__body{
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+    }
+}
