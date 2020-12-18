@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Card } from '../interfaces/card';
 import { CardPageService } from './card-page.service';
 
@@ -12,14 +12,14 @@ import { CardPageService } from './card-page.service';
 export class CardPageComponent implements OnInit {
 
   constructor(
-    private router: Router,
+    private route: ActivatedRoute,
     private cardPageService: CardPageService
   ) { }
 
   singleCard: Card
 
   ngOnInit(): void {
-    this.cardPageService.readCard(this.router.url.substring(1)).get().subscribe(doc => {
+    this.cardPageService.readCard(this.route.snapshot.paramMap.get('id')).get().subscribe(doc => {
       this.singleCard = doc.data()
     });
   }

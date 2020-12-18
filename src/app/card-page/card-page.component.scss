@@ -1,3 +1,5 @@
+@import "../../styles.scss";
+
 .c-card-page{
     background: #8b0000;
     padding: 20px;
@@ -12,15 +14,19 @@
     &__title{
         text-transform: capitalize;
         color: #fff;
-        //position: absolute;
+        @include mq($until: tablet) {
+            font-size: 34px;
+        }
     }
     &__img{
         width: 100%;
+        @include mq($until: tablet) {
+            margin-top: 15px;
+        }
     }
     &__body{
         width: 100%;
         color: #fff;
-        font-weight: 500;
         font-size: 18px;
     }
 }

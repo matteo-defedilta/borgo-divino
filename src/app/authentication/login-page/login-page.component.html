@@ -1,0 +1,9 @@
+<button *ngIf="!isLogged()" (click)="callLogin()">Login con Facebook</button>
+<button *ngIf="isLogged()" (click)="callLogout()">Logout</button>
+
+<div *ngIf="isLogged()">
+  <p>DATI UTENTE</p>
+  <p>{{ utente?.admin }}</p>
+  <p>{{ utente?.name }}</p>
+  <p>{{ utente?.ticket }}</p>
+</div>

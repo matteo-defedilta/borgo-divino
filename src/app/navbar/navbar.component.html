@@ -11,22 +11,23 @@
   
     <div class="collapse navbar-collapse px-4" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
-        </li>
         <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item" *ngIf ="isLogged() && utente.admin">
           <a class="nav-link" routerLink="/card">Crea una card</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">
+            <ng-container *ngIf ="!isLogged()">
+              Login
+            </ng-container>
+            
+            <ng-container *ngIf ="isLogged()">
+              Logout
+            </ng-container>
+            
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
         </li>
       </ul>
     </div>

@@ -17,7 +17,10 @@ import { CardsComponent } from './cards/cards.component';
 import { CardLayoutComponent } from './card-layout/card-layout.component';
 import { CardPageComponent } from './card-page/card-page.component';
 
-import { UselessPipe } from './pipe/custom-string.pipe'
+import { UselessPipe } from './pipe/custom-string.pipe';
+import { LoginPageComponent } from './authentication/login-page/login-page.component'
+import { AuthGuard } from './authentication/service/auth-guard.service';
+import { AuthenticationService } from './authentication/service/authentication.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { UselessPipe } from './pipe/custom-string.pipe'
     CardsComponent,
     CardLayoutComponent,
     CardPageComponent,
-    UselessPipe
+    UselessPipe,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +41,9 @@ import { UselessPipe } from './pipe/custom-string.pipe'
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     ReactiveFormsModule,
-
+    AngularFirestoreModule 
   ],
-  providers: [],
+  providers: [AuthGuard, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
