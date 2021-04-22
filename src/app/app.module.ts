@@ -21,6 +21,7 @@ import { UselessPipe } from './pipe/custom-string.pipe';
 import { LoginPageComponent } from './authentication/login-page/login-page.component'
 import { AuthGuard } from './authentication/service/auth-guard.service';
 import { AuthenticationService } from './authentication/service/authentication.service';
+import { TicketComponent } from './ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { AuthenticationService } from './authentication/service/authentication.s
     CardLayoutComponent,
     CardPageComponent,
     UselessPipe,
-    LoginPageComponent
+    LoginPageComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,

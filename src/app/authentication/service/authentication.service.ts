@@ -56,8 +56,8 @@ export class AuthenticationService {
 
   }
 
-  readUser(userId) {
-    return this.firestore.collection('users').doc(userId)
+  readDoc(collection, id) {
+    return this.firestore.collection(collection).doc(id)
   }
 
   get isLogged(): boolean {

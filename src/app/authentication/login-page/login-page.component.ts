@@ -18,7 +18,7 @@ export class LoginPageComponent implements OnInit {
     this.afAuth.authState
     .subscribe(user => {
       if (user) {
-        this.auth_login.readUser(user.uid).get().subscribe((doc: any) => {
+        this.auth_login.readDoc("users", user.uid).get().subscribe((doc: any) => {
           this.utente = doc.data();
         });
       }
