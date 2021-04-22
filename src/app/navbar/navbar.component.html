@@ -1,34 +1,39 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light c-navbar">
-    <nav class="navbar navbar-light bg-light">
-        <img src="/assets/img/logo.png" class=" c-navbar__logo" alt="">
-        <a class="navbar-brand c-navbar__title" href="#">
-          Perano Borgo DiVino
-        </a>
-      </nav>
-    <button class="navbar-toggler c-navbar__hamburger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse px-4" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/">Home</a>
-        </li>
-        <li class="nav-item" *ngIf ="isLogged() && utente.admin">
-          <a class="nav-link" routerLink="/card">Crea una card</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login">
-            <ng-container *ngIf ="!isLogged()">
-              Login
-            </ng-container>
-            
-            <ng-container *ngIf ="isLogged()">
-              Logout
-            </ng-container>
-            
-          </a>
-        </li>
-      </ul>
-    </div>
+  <nav class="navbar navbar-light bg-light">
+    <img src="/assets/img/logo.png" class=" c-navbar__logo" alt="">
+    <a class="navbar-brand c-navbar__title" href="#">
+      Perano Borgo DiVino
+    </a>
   </nav>
+  <button class="navbar-toggler c-navbar__hamburger" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse px-4" id="navbarSupportedContent">
+    <ul class="navbar-nav w-100">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home</a>
+      </li>
+      <li class="nav-item" *ngIf="isLogged() && utente.admin">
+        <a class="nav-link" routerLink="/card">Crea una card</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/ticket">I miei Ticket</a>
+      </li>
+      <li class="nav-item ml-auto">
+        <a class="nav-link" routerLink="/login">
+          <ng-container *ngIf="!isLogged()">
+            Login
+          </ng-container>
+
+          <ng-container *ngIf="isLogged()">
+            Logout
+          </ng-container>
+
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
