@@ -16,7 +16,7 @@ export class CardPageComponent implements OnInit {
     private cardPageService: CardPageService
   ) { }
 
-  singleCard: Card
+  singleCard: Card;
 
   ngOnInit(): void {
     this.cardPageService.readCard(this.route.snapshot.paramMap.get('id')).get().subscribe(doc => {

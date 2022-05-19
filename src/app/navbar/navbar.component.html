@@ -19,6 +19,9 @@
       <li class="nav-item" *ngIf="isLogged() && utente.admin">
         <a class="nav-link" routerLink="/card">Crea una card</a>
       </li>
+      <li class="nav-item" *ngIf="isLogged() && utente.admin">
+        <a class="nav-link" routerLink="/add-ticket">Aggiungi Ticket</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/ticket">I miei Ticket</a>
       </li>

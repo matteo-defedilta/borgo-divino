@@ -22,6 +22,7 @@ import { LoginPageComponent } from './authentication/login-page/login-page.compo
 import { AuthGuard } from './authentication/service/auth-guard.service';
 import { AuthenticationService } from './authentication/service/authentication.service';
 import { TicketComponent } from './ticket/ticket.component';
+import { AddTicketComponent } from './add-ticket/add-ticket.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { TicketComponent } from './ticket/ticket.component';
     CardPageComponent,
     UselessPipe,
     LoginPageComponent,
-    TicketComponent
+    TicketComponent,
+    AddTicketComponent
   ],
   imports: [
     BrowserModule,

@@ -51,9 +51,10 @@ export class AuthenticationService {
           })
         }
       });
+  }
 
-
-
+  getUsers() {
+    return this.firestore.collection('users').get()
   }
 
   readDoc(collection, id) {
