@@ -22,7 +22,7 @@
       <li class="nav-item" *ngIf="isLogged() && utente.admin">
         <a class="nav-link" routerLink="/add-ticket">Gestisci Ticket</a>
       </li>
-      <li class="nav-item" *ngIF="isLogged()">
+      <li class="nav-item" *ngIf="isLogged()">
         <a class="nav-link" routerLink="/ticket">I miei Ticket</a>
       </li>
       <li class="nav-item ml-auto">

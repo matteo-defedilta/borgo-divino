@@ -1,6 +1,9 @@
 <p>Lista Utenti</p> <br>
-<span>Cerca Utenti</span>
-<input type="text" class="inputSearch" (change)="filterUsers()">
+<div class="mb-5">
+    <span>Cerca Utenti</span>
+    <input type="text" class="inputSearch" (keyup)="filterUsers()">
+</div>
+
 
 <div *ngIf="filteredUserlist.length > 0 ; else elseBlock">
     <div *ngFor="let user of filteredUserlist; index as i;" class="form-group row">
