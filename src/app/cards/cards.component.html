@@ -6,7 +6,9 @@
   
       <label>Inserire Descrizione Della Card</label>
       <textarea class="form-control" type="text" [value]="cardDesc" formControlName="cardDesc" rows="3"></textarea>
-
+  
+      <label>Inserire l'immagine della card</label>
+      <input class="form-control" type="text" [value]="cardImg" formControlName="cardImg" />
       <button class="waves-effect waves-light btn col s12" (click)="newCard()" >Crea Card</button>
     </form>
   </div>

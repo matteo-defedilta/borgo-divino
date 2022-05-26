@@ -1,4 +1,5 @@
-<button *ngIf="!isLogged()" (click)="callLogin()">Login con Facebook</button>
+<button *ngIf="!isLogged()" (click)="callGoogleLogin()">Login con Google</button> <br>
+<button *ngIf="!isLogged()" (click)="callFacebookLogin()">Login con Facebook</button>
 <button *ngIf="isLogged()" (click)="callLogout()">Logout</button>
 
 <div *ngIf="isLogged()">

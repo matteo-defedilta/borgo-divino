@@ -3,13 +3,14 @@
     <ng-container  *ngFor="let card of cards" >
       <div class="card c-card__item col-12 col-md-4" routerLink="{{card.id}}">
         <img
-          class="col-6 col-md-12 card-img-top"
-          src="assets/img/wine.jpg"
+          class="col-md-12 card-img-top"
+          src="{{ card.cardImg }}"
           alt="Card image cap"
         />
-        <div class="col-6 col-md-12 rounded-top card-body">
+        <div class="col-md-12 rounded-top card-body">
           <h4 class="card-title">{{ card.cardTitle }}</h4>
           <p class="card-text">{{ card.cardDesc }}</p>
+          
         </div>
         <ng-container *ngIf="cardSelector == 'createCard'">
           <button class="btn btn-danger" (click)="deleteCard(card.id)">

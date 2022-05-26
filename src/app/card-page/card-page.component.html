@@ -1,12 +1,12 @@
 <div class="row c-card-page">
     <div class="c-card-page__home" routerLink="/">← Torna alla home</div>
     <div class="col-12 col-md-5 ">
-        <img class="c-card-page__img" src="assets/img/wine.jpg" alt="" srcset="" />
+        <img class="c-card-page__img" src="{{ singleCard.cardImg }}" alt="" srcset="" />
     </div>
     <div class="col-12 col-md-7 ">
         <h1 class="c-card-page__title display-4">{{ singleCard?.cardTitle }}</h1>
         <div class="c-card-page__body">
-            {{ singleCard?.cardDesc }}
+            {{ singleCard?.cardDesc }} 
           </div>
     </div>
 </div>

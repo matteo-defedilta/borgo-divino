@@ -17,12 +17,14 @@ export class CardsComponent implements OnInit {
   cardValue: FormGroup;
   cardTitle: string;
   cardDesc: string;
+  cardImg: string;
 
 
   ngOnInit(): void {
     this.cardValue = this.change_value_form.group({
       cardTitle: ["", Validators.required],
-      cardDesc: ["", Validators.required]
+      cardDesc: ["", Validators.required],
+      cardImg: ["", Validators.required]
     })
   }
 

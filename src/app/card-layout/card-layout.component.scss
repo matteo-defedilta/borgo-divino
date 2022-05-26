@@ -7,19 +7,21 @@
   &__item {
     background: #8b0000;
     padding-top: 15px;
+    padding-bottom: 10px;
     height: 100%;
     border: 10px solid white;
     @include mq($until: tablet) {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: row;
-      justify-content: flex-end;
-      padding: 5px;
-      margin: 5px 0;
+      // display: flex;
+      // align-items: flex-start;
+      // flex-direction: row;
+      // justify-content: flex-end;
+      // padding: 5px;
+      // margin: 5px 0;
     }
 
     .card-img-top{     
       padding: 0;
+      aspect-ratio: 14/9;
     }
 
     .card-body {
@@ -37,9 +39,9 @@
       }
 
       @include mq($until: tablet) {
-        margin: 0;
-        height: 100%;
-        border: none;
+        // margin: 0;
+        // height: 100%;
+        // border: none;
       }
     }
 
@@ -51,7 +53,7 @@
 
     .card-text{
       @include mq($until: tablet) {
-        position: absolute;
+        // position: absolute;
       }
     }
   }

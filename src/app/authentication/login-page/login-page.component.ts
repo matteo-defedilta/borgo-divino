@@ -25,10 +25,14 @@ export class LoginPageComponent implements OnInit {
     })
   }
 
-  callLogin() {
+  callFacebookLogin() {
     this.auth_login.doFacebookLogin();
   }
 
+  callGoogleLogin() {
+    this.auth_login.doGoogleLogin();
+  }
+  
   callLogout() {
     this.auth_login.signOut();
   }

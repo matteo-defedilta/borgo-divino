@@ -11,6 +11,28 @@ export class AuthenticationService {
     public afAuth: AngularFireAuth,
     public firestore: AngularFirestore
   ) { }
+  
+  doGoogleLogin() {
+    return new Promise<any>((resolve, reject) => {
+      let provider = new firebase.auth.GoogleAuthProvider();
+      provider.addScope('profile');
+      provider.addScope('email');
+      this.afAuth
+        .signInWithPopup(provider)
+        .then(res => {
+          resolve(res);
+          console.log("logged");
+          console.log(res);
+          this.storeUser(res.user);
+          localStorage.setItem('user', JSON.stringify(res));
+
+        }, err => {
+          console.log(err);
+          reject(err);
+          localStorage.setItem('user', null);
+        })
+    })
+  }
 
   doFacebookLogin() {
     return new Promise<any>((resolve, reject) => {

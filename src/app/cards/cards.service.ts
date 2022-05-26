@@ -10,7 +10,7 @@ export class CardsService {
 
   constructor(private firestore: AngularFirestore) { }
 
-  addNewCard(data) {
+  addNewCard(data) { 
     this.firestore
       .collection('cards')
       .add(data)
